@@ -10,9 +10,7 @@ TEMP_MONGODB = "mongodb+srv://AsadAli:AsadAli@cluster0.3ejv7.mongodb.net/myFirst
 
 
 if config.MONGO_DB_URI is None:
-    LOGGER(__name__).warning(
-        "Your bot will work on @VENOM_HAIN_HUM mongo database..."
-    )
+    LOGGER(__name__).warning("No MONGO DB URL found. 😁")
     temp_client = Client(
         "AnonX",
         bot_token=config.BOT_TOKEN,
