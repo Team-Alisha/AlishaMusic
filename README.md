@@ -57,6 +57,17 @@
     
 </details>
 
+</details>
+
+<details>
+
+<summary><b>ᴅᴇᴘʟᴏʏ ᴛᴏ sᴄᴀʟʟɪɴɢᴏ</b></summary>
+
+<br>
+
+<p align="center"><a href="https://my.scalingo.com/deploy?template=https://github.com/Team-Alisha/AnonX"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
+
+</details>
 
 ## ᴏᴡɴᴇʀ
 
