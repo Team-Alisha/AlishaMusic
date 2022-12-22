@@ -122,8 +122,8 @@ async def gen_thumb(videoid):
             font4 = ImageFont.truetype('assets/font2.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), "KRISHNA x MUSIC", fill="white", font = font1, align ="left") 
-            image4.text((670, 150), "KRISHNA MUSIC", fill="white", font = font2, stroke_width=2, stroke_fill="yellow", align ="left") 
+            image4.text((10, 10), "ALISHA x MUSIC", fill="white", font = font1, align ="left") 
+            image4.text((670, 150), "ALISHA MUSIC", fill="white", font = font2, stroke_width=2, stroke_fill="yellow", align ="left") 
 
             # title
             title1 = truncate(title)
