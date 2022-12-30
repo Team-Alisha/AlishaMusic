@@ -63,7 +63,7 @@ LOGGER_COMMAND : ["logger"]
 
 #Heroku
 GETLOG_COMMAND : ["get_log", "logs", "getlog", "log"]
-GETVAR_COMMAND : ["get_var", "getvar", "showvar"]
+GETVAR_COMMAND : ["get_war"]
 DELVAR_COMMAND : ["del_var", "delvar"]
 SETVAR_COMMAND : ["set_var", "setvar", "addvar"]
 USAGE_COMMAND : ["usage"]
