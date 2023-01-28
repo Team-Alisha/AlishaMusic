@@ -69,6 +69,12 @@
 
 </details>
 
+## ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 🚄
+
+ꜰᴏʀ ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ ᴍᴀᴋᴇ [Necessary Variables Here](https://github.com/Team-Alisha/AlishaMusic ), ᴜ ʜᴀᴠᴇ ᴛᴏ ꜰɪʟʟ.
+
+<p align="center"><a href="https://railway.app/new/template?template=https://github.com/ITZ-ZAID/Music-Deploy&envs=STRING_SESSION,MONGO_DB_URI,OWNER_ID,LOG_GROUP_ID,BOT_TOKEN,SUPPORT_CHANNEL,SUPPORT_GROUP,API_ID,API_HASH,AUTO_LEAVING_ASSISTANT,DURATION_LIMIT_MIN"> <img src="https://img.shields.io/badge/Deploy%20To%20Railway-black?style=for-the-badge&logo=railway" width="220" height="38.45"/></a></p>
+
 ## ᴏᴡɴᴇʀ
 
 [ᴀʙʜɪᴍᴀɴʏᴜ sɪɴɢʜ ʀᴀɴᴀᴡᴀᴛ](https://t.me/venom_hain_hum) 
