@@ -71,9 +71,10 @@
 
 ## ᴅᴇᴘʟᴏʏ ᴏɴ ʀᴀɪʟᴡᴀʏ 🚄
 
-[![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/Team-Alisha/AlishaMusic&envs=STRING_SESSION,MONGO_DB_URI,OWNER_ID,LOG_GROUP_ID,BOT_TOKEN,SUPPORT_CHANNEL,SUPPORT_GROUP,API_ID,API_HASH,AUTO_LEAVING_ASSISTANT,DURATION_LIMIT_MIN)
+[![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template? template=https://github.com/Team-Alisha/AlishaMusic&envs=STRING_SESSION,MONGO_DB_URI,OWNER_ID,LOG_GROUP_ID,BOT_TOKEN,SUPPORT_CHANNEL,SUPPORT_GROUP,API_ID,API_HASH,AUTO_LEAVING_ASSISTANT,DURATION_LIMIT_MIN)
 
-## ᴏᴡɴᴇʀ
+
+
 
 [ᴀʙʜɪᴍᴀɴʏᴜ sɪɴɢʜ ʀᴀɴᴀᴡᴀᴛ](https://t.me/venom_hain_hum) 
 
