@@ -61,13 +61,9 @@
 
 <details>
 
-<summary><b>ᴅᴇᴘʟᴏʏ ᴛᴏ sᴄᴀʟʟɪɴɢᴏ</b></summary>
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/pdu7JZ?referralCode=Q7indz)
 
-<br>
 
-<p align="center"><a href="https://my.scalingo.com/deploy?template=https://github.com/Team-Alisha/AlishaMusic"> <img src="https://cdn.scalingo.com/deploy/button.svg" width="220" height="38.45"/></a></p>
-
-</details>
 
 
 
