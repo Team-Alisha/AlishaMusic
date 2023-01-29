@@ -65,6 +65,8 @@
 
 [ᴀʙʜɪᴍᴀɴʏᴜ sɪɴɢʜ ʀᴀɴᴀᴡᴀᴛ](https://t.me/venom_hain_hum) 
 
+<a href="https://github.com/Team-Alisha" alt="Team-Alisha"> <img src="https://img.shields.io/badge/Abhimanyu-90302f?logo=github" /></a>  
+
 ## ᴀᴄᴋɴᴏᴡʟᴇᴅɢᴇᴍᴇɴᴛs
 
 sᴘᴇᴄɪᴀʟ ᴛʜᴀɴᴋs ᴛᴏ ᴛʜᴇsᴇ ᴀᴍᴀᴢɪɴɢ ᴘʀᴏᴊᴇᴄᴛs/ᴘᴇᴏᴘʟᴇ ᴡʜɪᴄʜ/ᴡʜᴏ ʜᴇʟᴘᴇᴅ ʜᴇʀᴏ ᴍᴜsɪᴄs ʙᴏᴛ:
