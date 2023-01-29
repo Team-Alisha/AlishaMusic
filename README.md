@@ -58,7 +58,7 @@
 
 ## ᴅᴇᴘʟᴏʏ ᴛᴏ ʀᴀɪʟᴡᴀʏ
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Ogvi8T?referralCode=dg7-xl)
+[![Deploy on Railway](https://railway.app/button.svg)](https://github.com/Team-Alisha/Railway)
 
 
 ## ᴏᴡɴᴇʀ
