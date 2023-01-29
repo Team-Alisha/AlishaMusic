@@ -55,11 +55,6 @@
 
 [![Deploy+On+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Team-Alisha/AlishaMusic)
     
-</details>
-
-</details>
-
-<details>
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/pdu7JZ?referralCode=Q7indz)
 
