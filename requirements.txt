@@ -16,11 +16,11 @@ pyrogram==1.4.16
 python-dotenv
 pyyaml==5.3.1
 requests
-speedtest-cli
+git+https://github.com/Padget123/Alishaub
 spotipy
 tgcrypto
 numpy
 youtube-search
 youtube-search-python
-yt-dlp
+git+https://github.com/Padget123/alishadlp
 numpy
