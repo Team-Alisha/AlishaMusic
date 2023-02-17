@@ -58,7 +58,8 @@
 
 ## ᴅᴇᴘʟᴏʏ ᴛᴏ ʀᴀɪʟᴡᴀʏ
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://github.com/Team-Alisha/Railway)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Doj8Ma?referralCode=Abhimanyu)
+
 
 
 ## ᴏᴡɴᴇʀ
