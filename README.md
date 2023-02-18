@@ -58,8 +58,7 @@
 
 ## ᴅᴇᴘʟᴏʏ ᴛᴏ ʀᴀɪʟᴡᴀʏ
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Doj8Ma?referralCode=Abhimanyu)
-
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Vtod5V?referralCode=Abhimanyu)
 
 
 ## ᴏᴡɴᴇʀ
