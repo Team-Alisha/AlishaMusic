@@ -10,9 +10,9 @@ lyricsgenius
 motor
 pillow
 psutil
-pytgcalls==0.9.7
+pytgcalls==0.9.6
 pykeyboard
-pyrogram==2.0.100
+pyrogram==2.0.00
 python-dotenv
 pyyaml==5.3.1
 requests
