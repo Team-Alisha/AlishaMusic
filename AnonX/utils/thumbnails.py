@@ -1,6 +1,3 @@
-# Random Choice Thambnail added by the Team Alexa © Team Alisha
-
-
 import os
 import re
 import textwrap
@@ -14,6 +11,10 @@ import random
 from config import YOUTUBE_IMG_URL
 from AnonX import app
 
+BG_IMG = ("https://telegra.ph/file/a980fffee08238fa58497.png",
+           "https://telegra.ph/file/3719ae2f4eaf3256f1862.png",
+           "https://telegra.ph/file/114bdd1a59320163c9710.png",
+           "https://telegra.ph/file/86bc20f2dde2dc406f05a.png",)
 
 
 def changeImageSize(maxWidth, maxHeight, image):
@@ -34,7 +35,7 @@ def add_corners(im):
     im.putalpha(mask)
 
 
-async def gen_thumb(videoid):
+async def gen_thumb(videoid, user_id):
     if os.path.isfile(f"cache/{videoid}_{user_id}.png"):
         return f"cache/{videoid}_{user_id}.png"
     url = f"https://www.youtube.com/watch?v={videoid}"
@@ -85,10 +86,8 @@ async def gen_thumb(videoid):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        image_dir = 'assets/Images/'
-        image_files = [f for f in os.listdir(image_dir) if f.endswith('.png')]
-        random_image_file = random.choice(image_files)
-        bg = Image.open(image_dir + random_image_file)
+        random_image_file = random.choice(BG_IMG)
+        bg = Image.open(random_image_file)
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -177,7 +176,7 @@ async def gen_thumb(videoid):
         return YOUTUBE_IMG_URL
 
 
-async def gen_qthumb(videoid):
+async def gen_qthumb(videoid, user_id):
     if os.path.isfile(f"cache/que{videoid}_{user_id}.png"):
         return f"cache/que{videoid}_{user_id}.png"
     url = f"https://www.youtube.com/watch?v={videoid}"
@@ -228,10 +227,8 @@ async def gen_qthumb(videoid):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        image_dir = 'assets/Images/'
-        image_files = [f for f in os.listdir(image_dir) if f.endswith('.png')]
-        random_image_file = random.choice(image_files)
-        bg = Image.open(image_dir + random_image_file)
+        random_image_file = random.choice(BG_IMG)
+        bg = Image.open(random_image_file)
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
