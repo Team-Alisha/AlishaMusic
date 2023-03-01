@@ -13,12 +13,12 @@ from AnonX.utils.database import (add_active_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
 from AnonX.utils.exceptions import AssistantErr
-from AnonX.utils.inline.play import (stream_markup, queue_markup,
+from AnonX.utils.inline.play import (stream_markup,
                                           telegram_markup)
 from AnonX.utils.inline.playlist import close_markup
 from AnonX.utils.pastebin import Anonbin
 from AnonX.utils.stream.queue import put_queue, put_queue_index
-from AnonX.utils.thumbnails import gen_thumb, gen_qthumb
+from AnonX.utils.thumbnails import gen_thumb
 
 
 async def stream(
@@ -90,7 +90,7 @@ async def stream(
                 except:
                     raise AssistantErr(_["play_16"])
                 await Anon.join_call(
-                    chat_id, original_chat_id, file_path, video=status, image=thumbnail
+                    chat_id, original_chat_id, file_path, video=status
                 )
                 await put_queue(
                     chat_id,
@@ -104,16 +104,14 @@ async def stream(
                     "video" if video else "audio",
                     forceplay=forceplay,
                 )
-                img = await gen_thumb(vidid, user_id)
+                img = await gen_thumb(vidid)
                 button = stream_markup(_, vidid, chat_id)
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
                     caption=_["stream_1"].format(
-                        title[:27],
-                        f"https://t.me/{app.username}?start=info_{vidid}",
-                        duration_min,
                         user_name,
+                        f"https://t.me/{app.username}?start=info_{vidid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
@@ -135,7 +133,7 @@ async def stream(
             return await app.send_photo(
                 original_chat_id,
                 photo=carbon,
-                caption=_["playlist_18"].format(position, link),
+                caption=_["playlist_18"].format(link, position),
                 reply_markup=upl,
             )
     elif streamtype == "youtube":
@@ -143,7 +141,6 @@ async def stream(
         vidid = result["vidid"]
         title = (result["title"]).title()
         duration_min = result["duration_min"]
-        thumbnail = result["thumb"]
         status = True if video else None
         try:
             file_path, direct = await YouTube.download(
@@ -164,21 +161,17 @@ async def stream(
                 "video" if video else "audio",
             )
             position = len(db.get(chat_id)) - 1
-            qimg = await gen_qthumb(vidid, user_id)
-            button = queue_markup(_, vidid, chat_id)
-            run = await app.send_photo(
+            await app.send_message(
                 original_chat_id,
-                photo=qimg,
-                caption=_["queue_4"].format(
-                    position, title[:27], duration_min, user_name
+                _["queue_4"].format(
+                    position, title[:30], duration_min, user_name
                 ),
-                reply_markup=InlineKeyboardMarkup(button),
             )
         else:
             if not forceplay:
                 db[chat_id] = []
             await Anon.join_call(
-                chat_id, original_chat_id, file_path, video=status, image=thumbnail
+                chat_id, original_chat_id, file_path, video=status
             )
             await put_queue(
                 chat_id,
@@ -192,24 +185,19 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await gen_thumb(vidid, user_id)
+            img = await gen_thumb(vidid)
             button = stream_markup(_, vidid, chat_id)
-            try:
-                run = await app.send_photo(
-                    original_chat_id,
-                    photo=img,
-                    caption=_["stream_1"].format(
-                        title[:27],
-                        f"https://t.me/{app.username}?start=info_{vidid}",
-                        duration_min,
-                        user_name,
-                    ),
-                    reply_markup=InlineKeyboardMarkup(button),
-                )
-                db[chat_id][0]["mystic"] = run
-                db[chat_id][0]["markup"] = "stream"
-            except Exception as ex:
-                print(ex)
+            run = await app.send_photo(
+                original_chat_id,
+                photo=img,
+                caption=_["stream_1"].format(
+                    user_name,
+                    f"https://t.me/{app.username}?start=info_{vidid}",
+                ),
+                reply_markup=InlineKeyboardMarkup(button),
+            )
+            db[chat_id][0]["mystic"] = run
+            db[chat_id][0]["markup"] = "stream"
     elif streamtype == "soundcloud":
         file_path = result["filepath"]
         title = result["title"]
@@ -324,8 +312,7 @@ async def stream(
         link = result["link"]
         vidid = result["vidid"]
         title = (result["title"]).title()
-        thumbnail = result["thumb"]
-        duration_min = "00:00"
+        duration_min = "Live Track"
         status = True if video else None
         if await is_active_chat(chat_id):
             await put_queue(
@@ -353,7 +340,7 @@ async def stream(
             if n == 0:
                 raise AssistantErr(_["str_3"])
             await Anon.join_call(
-                chat_id, original_chat_id, file_path, video=status, image=thumbnail if thumbnail else None
+                chat_id, original_chat_id, file_path, video=status
             )
             await put_queue(
                 chat_id,
@@ -367,16 +354,14 @@ async def stream(
                 "video" if video else "audio",
                 forceplay=forceplay,
             )
-            img = await gen_thumb(vidid, user_id)
+            img = await gen_thumb(vidid)
             button = telegram_markup(_, chat_id)
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
                 caption=_["stream_1"].format(
-                    title[:27],
-                    f"https://t.me/{app.username}?start=info_{vidid}",
-                    duration_min,
                     user_name,
+                    f"https://t.me/{app.username}?start=info_{vidid}",
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
