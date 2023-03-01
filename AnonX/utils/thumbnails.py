@@ -14,11 +14,6 @@ import random
 from config import YOUTUBE_IMG_URL
 from AnonX import app
 
-BG_IMG = ("https://telegra.ph/file/150437bf3033214681633.png",
-           "https://telegra.ph/file/3b74a5d91c94f132c5db7.png",
-           "https://telegra.ph/file/ddbd1544ba366dddd1bd9.png",
-           "https://telegra.ph/file/ae27a741019c58f12d983.png",)
-
 
 
 def changeImageSize(maxWidth, maxHeight, image):
