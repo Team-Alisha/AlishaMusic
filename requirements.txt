@@ -24,4 +24,4 @@ youtube-search
 youtube-search-python==5.3.1
 git+https://github.com/Team-Alisha/yt-dlp@master
 numpy
-git+https://github.com/yt-dlp/yt-dlp.git
+
