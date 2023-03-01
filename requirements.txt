@@ -10,7 +10,7 @@ lyricsgenius
 motor
 pillow
 psutil
-pytgcalls==3.0.0
+pytgcalls==0.97
 pykeyboard
 pyrogram==2.0.00
 python-dotenv
