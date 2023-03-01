@@ -242,6 +242,16 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
     ]
     return buttons
 
+close_keyboard = InlineKeyboardMarkup( 
+            [
+                [
+                    InlineKeyboardButton(
+                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                    )
+                ]    
+            ]
+        )
+
 
 ## Slider Query Markup
 
