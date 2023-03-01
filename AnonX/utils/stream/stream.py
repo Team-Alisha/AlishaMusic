@@ -13,7 +13,7 @@ from AnonX.utils.database import (add_active_chat,
                                        is_active_chat,
                                        is_video_allowed, music_on)
 from AnonX.utils.exceptions import AssistantErr
-from AnonX.utils.inline.play import (stream_markup,
+from AnonX.utils.inline.play import (stream_markup, queue_markup,
                                           telegram_markup)
 from AnonX.utils.inline.playlist import close_markup
 from AnonX.utils.pastebin import Anonbin
