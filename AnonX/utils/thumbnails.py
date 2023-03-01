@@ -90,7 +90,10 @@ async def gen_thumb(videoid, user_id):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        bg = random.Image.open(BG_IMG)
+        image_dir = 'assets/Images/'
+        image_files = [f for f in os.listdir(image_dir) if f.endswith('.png')]
+        random_image_file = random.choice(image_files)
+        bg = Image.open(image_dir + random_image_file)
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -230,7 +233,10 @@ async def gen_qthumb(videoid, user_id):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        bg = random.Image.open(BG_IMG)
+        image_dir = 'assets/Images/'
+        image_files = [f for f in os.listdir(image_dir) if f.endswith('.png')]
+        random_image_file = random.choice(image_files)
+        bg = Image.open(image_dir + random_image_file)
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -318,4 +324,4 @@ async def gen_qthumb(videoid, user_id):
         return f"cache/que{videoid}_{user_id}.png"
     except Exception as e:
         print(e)
-        return YOUTUBE_IMG_URL        
+        return YOUTUBE_IMG_URL
