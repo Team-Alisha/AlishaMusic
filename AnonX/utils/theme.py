@@ -5,7 +5,7 @@
 
 
 import random
-from from AnonX.utils.database impor import get_theme
+from from AnonX.utils.database import get_theme
 
 themes = [
     "Alisha",
