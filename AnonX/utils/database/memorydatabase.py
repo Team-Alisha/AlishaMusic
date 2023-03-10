@@ -214,7 +214,21 @@ async def add_active_video_chat(chat_id: int):
 async def remove_active_video_chat(chat_id: int):
     if chat_id in activevideo:
         activevideo.remove(chat_id)
+        
+# Mute on off       
+async def is_muted(chat_id: int) -> bool:
+    mode = mute.get(chat_id)
+    if not mode:
+        return False
+    return mode
 
+
+async def mute_on(chat_id: int):
+    mute[chat_id] = True
+
+
+async def mute_off(chat_id: int):
+    mute[chat_id] = False
 
 # Delete command mode
 async def is_commanddelete_on(chat_id: int) -> bool:
