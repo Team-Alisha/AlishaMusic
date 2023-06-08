@@ -49,8 +49,8 @@ bash start
 ### Copy Pasters You Can Copy This But Must Give Credits ...
 
 ### ᴄʀᴇᴅɪᴛs 💖
-- [MrProgrammer](https://github.com/MrProgrammer72/GJ516VCBOT): Developer
-- [GJ516 vc player](https://telegram.me/GJ516_VCPLAYER_bot): Test Bot
+- [Abhimanyu](https://t.me/VeNom_HaiN_HuM): Developer
+- [Alisha Robot](https://telegram.me/AlishaMusic_Robot): Test Bot
 
 [![ForTheBadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
