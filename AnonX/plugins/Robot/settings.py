@@ -1,5 +1,6 @@
 from pyrogram import filters
 from pyrogram.errors import MessageNotModified
+from pyrogram.enums import ChatType
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
@@ -34,7 +35,7 @@ from AnonX.utils.inline.start import private_panel
 SETTINGS_COMMAND = get_command("SETTINGS_COMMAND")
 
 
-@app.on_message(
+@app.on_message(=-
     filters.command(SETTINGS_COMMAND)
     & filters.group
     & ~filters.edited
@@ -79,7 +80,7 @@ async def settings_back_markup(
         await CallbackQuery.answer()
     except:
         pass
-    if CallbackQuery.message.chat.type == "private":
+    if CallbackQuery.message.chat.type == ChatType.PRIVATE:
         try:
             await app.resolve_peer(OWNER_ID[0])
             OWNER = OWNER_ID[0]
